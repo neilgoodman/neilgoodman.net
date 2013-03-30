@@ -3,5 +3,16 @@
 	"contributors": [
 		"Neil Goodman (http://neilgoodman.net)"
 	],
-	"private": true
+	"private": true,
+	"homepage": "http://neilgoodman.net",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/posco2k8/neilgoodman.net.git"
+	},
+	"engines": {
+		"node": ">=0.4.0"
+	},
+	"dependencies": {
+		"wheat": "*"
+	}
 }
