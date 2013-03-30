@@ -4,7 +4,7 @@ This is the repository for my [wheat][] based blog. [neilgoodman.net][] currentl
 
 # Changes to [wheat][]
 
-[wheat][] uses [Haml][] out of the box for tempting. I do not like HAML, so I am porting the templating over to [Handlebars][].
+[wheat][] uses [Haml][] out of the box for tempting. I do not like [Haml][], so I am porting the templating over to [Handlebars][].
 
 # Licensing
 

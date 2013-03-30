@@ -1,0 +1,34 @@
+!!! 5
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %title #{(title ? title + " - " : "")}How To Node - NodeJS
+    %meta(name="description" content="Learn the zen of coding in NodeJS.")
+    %meta(name="viewport" content="width=device-width")
+    %link(href="/style.css" rel="stylesheet")
+    %link(href="/print.css" rel="stylesheet" media="print")
+    %link(rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed.xml")
+    %link(href="/favicon.ico" rel="icon" type="image/x-icon")
+  %body
+    #container
+      #header
+        %a{href: "/"}
+          %img.logo{src: "/logo.png", alt: "How to Node"}
+          .tagline
+            The zen of coding in node.js
+      = content
+      
+      #footer
+        %p &copy; 2011 Tim Caswell under the MIT license.
+        %p Content and articles are copyrighted to the individual authors. Design by&nbsp;
+          %a{href: "http://bengourley.co.uk"} Ben Gourley
+          . All code snippets used in the examples are in the public domain.
+        %p Wheat running on node #{process.version}
+    :script
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    :script
+      try {
+      var pageTracker = _gat._getTracker("UA-12824411-1");
+      pageTracker._trackPageview();
+      } catch(err) {}
