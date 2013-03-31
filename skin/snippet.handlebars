@@ -1,0 +1,33 @@
+<div class="snippet">
+    <a class="code-link" href="{{snippet.filename}}">{{snippet.base}}</a>
+
+    {{#if snippet.name}}
+        <span class="hash">{{snippet.name}}</span>
+    {{/if}}
+    
+    <pre>
+        <code>{{{snippet.code}}}</code>
+    </pre>
+    
+    {{#if snippet.output}}
+        <dl class="output">
+            <dt>Output</dt>
+            <dd>
+                {{#if snippet.output}}
+                    {{snippet.output}}
+                {{/if}}
+
+                {{#if snippet.lastExpression}}
+                    <div class="last-expression">=> {{inspect snippet.lastExpression}}</div>
+                {{/if}}
+            </dd>
+        </dl>
+    {{/if}}
+    
+    {{#if snippet.error}}
+        <dl class="error">
+            <dt>Error</dt>
+            <dd>{{snippet.error}}</dd>
+        </dl>
+    {{/if}}
+</div>

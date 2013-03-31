@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {{#if title}}
+                {{title}} - 
+            {{/if}}
+            How To Node - NodeJS
+        </title>
+        <meta name="description" content="Learn the zen of coding in NodeJS.">
+        <meta name="viewport" content="width=device-width">
+        <link href="/style.css" rel="stylesheet">
+        <link href="/print.css" rel="stylesheet" media="print">
+        <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed.xml">
+        <link href="/favicon.ico" rel="icon" type="image/x-icon">
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <a href="/">
+                    <img class="logo" src="/logo.png" alt="How to Node" />
+                </a>
+
+                <div class="tagline">The zen of coding in node.js</div>
+
+                {{{content}}}
+            </div>
+
+            <div id="footer">
+                <p>&copy; 2011 Tim Caswell under the MIT license.</p>
+                <p>Content and articles are copyrighted to the individual authors. Design by&nbsp; <a href="http://bengourley.co.uk">Ben Gourley</a>. All code snippets used in the examples are in the public domain.</p>
+            </div>
+
+            <script type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+                try {
+                    var pageTracker = _gat._getTracker("UA-12824411-1");
+                    pageTracker._trackPageview();
+                } catch(err) {}
+            </script>
+        </div>
+    </body>
+</html>

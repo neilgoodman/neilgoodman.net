@@ -1,0 +1,46 @@
+<div id="main" class="index">
+    {{#each articles}}
+        <div class="article">
+            <div class="author">
+                <img src="{{gravitar article.author.email "30"}}" />
+                By {{article.author.name}}
+            </div>
+            <div class="date" title="{{article.date}}">{{formatDate article.date "%Y.%m.%d"}}</div>
+            
+            <h3>
+                <a href="/{{article.name}}">article.title</a>
+            </h3>
+
+            {{{intro article.markdown}}}
+
+            <a class="more" href="/{{article.name}}">Read more...</a>
+        </div>
+    {{/each}}
+</div>
+
+<div id="sidebar">
+    <div class="aside">{{markdownEncode description}}</div>
+    <div class="bubble">
+        <h4>Articles</h4>
+        <ul>
+            {{#each articles}}
+                <li>
+                    <a href="/{{article.name}}">{{article.title}}</a>
+                    by
+                    {{article.author.name}}
+
+                    {{#if article.node}}
+                        <span class="versiontag">{{article.node}}</span>
+                    {{/if}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="bubble">
+        <h4>Related Reading</h4>
+        <a target="books" href="http://affiliate.manning.com/idevaffiliate.php?id=1209_277">
+            <img style="height:188px;width:150px;border:0;" src="http://www.manning.com/cantelon/cantelon_cover150.jpg" />
+        </a>
+    </div>
+</div>
