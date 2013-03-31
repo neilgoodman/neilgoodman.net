@@ -1,4 +1,4 @@
 
 [submodule "node_modules/wheat"]
 	path = node_modules/wheat
-	url = git://github.com/posco2k8/neilgoodman.net.git
+	url = git://github.com/posco2k8/wheat.git
