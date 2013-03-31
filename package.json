@@ -1,8 +1,6 @@
 {
 	"name": "neilgoodman.net",
-	"contributors": [
-		"Neil Goodman (http://neilgoodman.net)"
-	],
+	"author": "Neil Goodman (http://neilgoodman.net)",
 	"version": "1.0.0",
 	"private": true,
 	"homepage": "http://neilgoodman.net",
