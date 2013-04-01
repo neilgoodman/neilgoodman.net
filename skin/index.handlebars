@@ -2,35 +2,35 @@
     {{#each articles}}
         <div class="article">
             <div class="author">
-                <img src="{{gravitar article.author.email "30"}}" />
-                By {{article.author.name}}
+                <img src="{{gravitar author.email "30"}}" />
+                By {{author.name}}
             </div>
-            <div class="date" title="{{article.date}}">{{formatDate article.date "%Y.%m.%d"}}</div>
+            <div class="date" title="{{date}}">{{formatDate date "%Y.%m.%d"}}</div>
             
             <h3>
-                <a href="/{{article.name}}">article.title</a>
+                <a href="/{{name}}">{{title}}</a>
             </h3>
 
-            {{{intro article.markdown}}}
+            {{{intro markdown}}}
 
-            <a class="more" href="/{{article.name}}">Read more...</a>
+            <a class="more" href="/{{name}}">Read more...</a>
         </div>
     {{/each}}
 </div>
 
 <div id="sidebar">
-    <div class="aside">{{markdownEncode description}}</div>
+    <div class="aside">{{{markdownEncode description}}}</div>
     <div class="bubble">
         <h4>Articles</h4>
         <ul>
             {{#each articles}}
                 <li>
-                    <a href="/{{article.name}}">{{article.title}}</a>
+                    <a href="/{{name}}">{{title}}</a>
                     by
-                    {{article.author.name}}
+                    {{author.name}}
 
                     {{#if article.node}}
-                        <span class="versiontag">{{article.node}}</span>
+                        <span class="versiontag">{{node}}</span>
                     {{/if}}
                 </li>
             {{/each}}

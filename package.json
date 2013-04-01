@@ -12,6 +12,6 @@
 		"node": ">=0.4.0"
 	},
 	"dependencies": {
-		"wheat": "*"
+		"wheat": "0.2.6"
 	}
 }
