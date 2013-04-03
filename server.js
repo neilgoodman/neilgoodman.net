@@ -2,9 +2,9 @@
  * Server for neilgoodman.net.
  */
 
-var wheat = require('wheat'),
+var less = require('less'),
+    wheat = require('wheat'),
     connect = require('connect'),
-    http = require('http'),
     connectAssets = require('connect-assets');
 
 var app = connect();
@@ -14,7 +14,6 @@ app
     .use(connectAssets({
         src: __dirname + '/skin/public'
     }))
-    .use(connect.errorHandler())
     .use(function (req, res, next) {
         if (global.js) {
             global.js.root = '/javascripts';
@@ -27,4 +26,8 @@ app
         var wheatProcess = wheat(__dirname);
         wheatProcess.call(this, req, res, next);
     })
+    .use(connect.errorHandler({
+        showStack: true,
+        dumpExceptions: true
+    }))
     .listen(3000);
