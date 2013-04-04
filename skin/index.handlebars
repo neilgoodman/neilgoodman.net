@@ -1,26 +1,28 @@
-<div id="main" class="index">
-    {{#each articles}}
-        <div class="article">
-            <div class="author">
-                <img src="{{gravitar author.email "30"}}" />
-                By {{author.name}}
+<div class="row">
+    <div class="span8">
+        {{#each articles}}
+            <div class="well">
+                <div class="author">
+                    <img src="{{gravitar author.email "30"}}" />
+                    By {{author.name}}
+                </div>
+                <div class="date" title="{{date}}">{{formatDate date "%Y.%m.%d"}}</div>
+                
+                <h3>
+                    <a href="/{{name}}">{{title}}</a>
+                </h3>
+
+                {{{intro markdown}}}
+
+                <a class="more" href="/{{name}}">Read more...</a>
             </div>
-            <div class="date" title="{{date}}">{{formatDate date "%Y.%m.%d"}}</div>
-            
-            <h3>
-                <a href="/{{name}}">{{title}}</a>
-            </h3>
+        {{/each}}
+    </div>
 
-            {{{intro markdown}}}
+    <div class="span4">
+        <h4>Description</h4>
+        {{{markdownEncode description}}}
 
-            <a class="more" href="/{{name}}">Read more...</a>
-        </div>
-    {{/each}}
-</div>
-
-<div id="sidebar">
-    <div class="aside">{{{markdownEncode description}}}</div>
-    <div class="bubble">
         <h4>Articles</h4>
         <ul>
             {{#each articles}}
@@ -35,12 +37,5 @@
                 </li>
             {{/each}}
         </ul>
-    </div>
-
-    <div class="bubble">
-        <h4>Related Reading</h4>
-        <a target="books" href="http://affiliate.manning.com/idevaffiliate.php?id=1209_277">
-            <img style="height:188px;width:150px;border:0;" src="http://www.manning.com/cantelon/cantelon_cover150.jpg" />
-        </a>
     </div>
 </div>

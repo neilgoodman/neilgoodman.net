@@ -1,3 +1,1 @@
-# neilgoodman.net
-
 Test

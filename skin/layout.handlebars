@@ -6,44 +6,26 @@
             {{#if title}}
                 {{title}} - 
             {{/if}}
-            How To Node - NodeJS
+            neilgoodman.net
         </title>
-        <meta name="description" content="Learn the zen of coding in NodeJS.">
         <meta name="viewport" content="width=device-width">
-        <link href="/style.css" rel="stylesheet">
-        <link href="/print.css" rel="stylesheet" media="print">
         <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed.xml">
-        <link href="/favicon.ico" rel="icon" type="image/x-icon">
+
         {{js "javascripts.js"}}
         {{css "stylesheets"}}
     </head>
     <body>
-        <div id="container">
-            <div id="header">
-                <a href="/">
-                    <img class="logo" src="/logo.png" alt="How to Node" />
-                </a>
-
-                <div class="tagline">The zen of coding in node.js</div>
-
-                {{{content}}}
+        <div class="navbar">
+            <div class="navbar-inner">
+                <a class="brand" href="#">neilgoodman.net</a>
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                </ul>
             </div>
+        </div>
 
-            <div id="footer">
-                <p>&copy; 2011 Tim Caswell under the MIT license.</p>
-                <p>Content and articles are copyrighted to the individual authors. Design by&nbsp; <a href="http://bengourley.co.uk">Ben Gourley</a>. All code snippets used in the examples are in the public domain.</p>
-            </div>
-
-            <script type="text/javascript">
-                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-            </script>
-            <script type="text/javascript">
-                try {
-                    var pageTracker = _gat._getTracker("UA-12824411-1");
-                    pageTracker._trackPageview();
-                } catch(err) {}
-            </script>
+        <div class="container">
+            {{{content}}}
         </div>
     </body>
 </html>
