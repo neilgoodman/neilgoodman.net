@@ -1,5 +1,5 @@
 Email:  admin@neilgoodman.net
-Github: posco2k8
+GitHub: posco2k8
 Twitter: posco2k8
 Location: Madison, WI
 

@@ -20,22 +20,26 @@
     </div>
 
     <div class="span4">
-        <h4>Description</h4>
-        {{{markdownEncode description}}}
+        <div class="well">
+            <h4>Description</h4>
+            {{{markdownEncode description}}}
+        </div>
 
-        <h4>Articles</h4>
-        <ul>
-            {{#each articles}}
-                <li>
-                    <a href="/{{name}}">{{title}}</a>
-                    by
-                    {{author.name}}
+        <div class="well">
+            <h4>Articles</h4>
+            <ul>
+                {{#each articles}}
+                    <li>
+                        <a href="/{{name}}">{{title}}</a>
+                        by
+                        {{author.name}}
 
-                    {{#if article.node}}
-                        <span class="versiontag">{{node}}</span>
-                    {{/if}}
-                </li>
-            {{/each}}
-        </ul>
+                        {{#if article.node}}
+                            <span class="versiontag">{{node}}</span>
+                        {{/if}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
     </div>
 </div>
