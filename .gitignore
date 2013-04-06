@@ -1,17 +1,13 @@
-##########################
 # Sublime Workspace File #
-##########################
-.idea
 neilgoodman.net.sublime-workspace
 
-##########################
-# Node Modules           #
-##########################
+# Node Modules #
 node_modules/*
 
-###########################
-# OS Garbage              #
-###########################
+# Assets #
+builtAssets
+
+# OS Garbage #
 .DS_Store
 .DS_Store?
 ._*
