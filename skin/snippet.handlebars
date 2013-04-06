@@ -1,13 +1,11 @@
 <div class="snippet">
-    <a class="code-link" href="{{snippet.filename}}">{{snippet.base}}</a>
+    <a class="code-link" href="{{snippet.filename}}"><i class="icon-white icon-arrow-down"></i> {{snippet.base}}</a>
 
     {{#if snippet.name}}
         <span class="hash">{{snippet.name}}</span>
     {{/if}}
     
-    <pre>
-        <code>{{{snippet.code}}}</code>
-    </pre>
+    <pre class="prettyprint"><code>{{snippet.code}}</code></pre>
     
     {{#if snippet.output}}
         <dl class="output">

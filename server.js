@@ -13,6 +13,7 @@ app
     .use(connectAssets({
         src: __dirname + '/skin/assets'
     }))
+    .use(connect.static(__dirname + '/skin/assets'))
     .use(function (req, res, next) {
         if (global.js) {
             global.js.root = '/javascripts';
@@ -25,7 +26,6 @@ app
         var wheatProcess = wheat(__dirname);
         wheatProcess.call(this, req, res, next);
     })
-    .use(connect.static(__dirname + '/skin/public'))
     .use(connect.errorHandler({
         showStack: true,
         dumpExceptions: true

@@ -1,5 +1,6 @@
 //= require jquery-1.9.1
 //= require underscore
+//= require prettify
 //= require bootstrap/bootstrap-affix
 //= require bootstrap/bootstrap-alert
 //= require bootstrap/bootstrap-button

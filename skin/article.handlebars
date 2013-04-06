@@ -5,7 +5,7 @@
                 <a class="sha-version" href="/{{article.version}}/{{article.name}}">Static Version</a>
             {{/if}}
             <h1>
-                <a href="/{{article.name}}">{{article.title}}</a>
+                <a href="/article/{{article.name}}">{{article.title}}</a>
             </h1>
 
             {{{markdownEncode article.markdown}}}
@@ -86,7 +86,7 @@
                         <ul>
                             {{#each article.uniqueSnippets}}
                             <li>
-                                <a href="{{snippet.filename}}">base</a>
+                                <a href="{{filename}}">{{base}}</a>
                             </li>
                             {{/each}}
                         </ul>

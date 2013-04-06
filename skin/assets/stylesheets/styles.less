@@ -1,0 +1,43 @@
+pre.prettyprint {
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 11px;
+        height: 11px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 2px solid @grayDark;
+        background-color: rgba(255, 255, 255, .5);
+    }
+
+    &,
+    code {
+        white-space: pre;
+        word-wrap: normal;
+    }
+}
+
+.snippet {
+    position: relative;
+}
+
+.code-link {
+    position: absolute;
+    right: 0;
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, .5);
+    color: @white;
+    text-decoration: none;
+    padding: 5px 10px;
+    .border-radius(0 0 0 4px);
+    .transition(all .3s linear);
+
+    &:hover {
+        color: @white;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, .6);
+    }
+}

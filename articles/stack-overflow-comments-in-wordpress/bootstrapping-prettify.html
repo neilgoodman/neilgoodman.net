@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheets/prettify.css" type="text/css" />
+        <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/prettify.js"></script>
+        <!-- Added jQuery script to include the 'prettyprint' class on <code> tags and to start up Prettify using the prettyPrint() function. -->
+        <?php
+            // Include jQuery from Google APIs.
+            if (!is_admin()) {
+                wp_deregister_script('jquery');
+                wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"), false, '1.7.1');
+                wp_enqueue_script('jquery');
+            }
+        ?>
+        <?php wp_head(); ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                var a = false;
+
+                // Select all code tags in the document
+                jQuery('code').each(function() {
+                    
+                    // Find the code tag's parent.
+                    var parent = jQuery(this).parent();
+                   
+                    // If the code tag's parent is a pre tag and doesn't have the class
+                    // prettyprint, then we add the prettyprint class and then wrap the tags
+                    // in a div that has the class codeblock. 
+                    if (parent.is("pre") && !parent.hasClass("prettyprint")) {
+                        parent.addClass("prettyprint").wrap('<div class="codeblock"></div>');
+                        a = true;
+                    }
+                    else if (!parent.is("pre")) {
+                        // If the parent of the code tag is something other than pre then we just
+                        // add the prettprint class and custom single_line_code class so we can add
+                        // further styles if we want to.
+                        jQuery(this).addClass("prettyprint").addClass("single_line_code");
+                        a = true;
+                    }
+                });
+                
+                // If we modified any of the tags then trigger prettyPrint() rendering.
+                if (a) prettyPrint();
+            });
+        </script>
+    </head>
+    <body>
