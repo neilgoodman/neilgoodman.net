@@ -3,16 +3,15 @@
  */
 
 var less = require('less'),
-    wheat = require('wheat'),
     connect = require('connect'),
-    connectAssets = require('connect-assets');
+    connectAssets = require('connect-assets'),
+    wheat = require('wheat');
 
 var app = connect();
 app
     .use(connect.compress())
-    .use(connect.static(__dirname + '/skin/public'))
     .use(connectAssets({
-        src: __dirname + '/skin/public'
+        src: __dirname + '/skin/assets'
     }))
     .use(function (req, res, next) {
         if (global.js) {
@@ -26,6 +25,7 @@ app
         var wheatProcess = wheat(__dirname);
         wheatProcess.call(this, req, res, next);
     })
+    .use(connect.static(__dirname + '/skin/public'))
     .use(connect.errorHandler({
         showStack: true,
         dumpExceptions: true
