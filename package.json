@@ -9,7 +9,8 @@
 		"url": "git://github.com/posco2k8/neilgoodman.net.git"
 	},
 	"engines": {
-		"node": ">=0.4.0"
+		"node": ">=0.8.x",
+  		"npm": ">=1.1.2"
 	},
 	"dependencies": {
 		"wheat": "0.2.6",
