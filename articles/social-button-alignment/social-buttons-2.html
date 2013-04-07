@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Social Buttons</title>
+        
+        <!-- The CSS for the social buttons -->
+        <style type="text/css">
+            .social-button-container {
+                background-color: red;
+                
+                /** 
+                 * This is a nice CSS trick that allows you to clear an element
+                 * without having to add extra elements to your HTML. This helps
+                 * seperate content from design, which should always be an architectural
+                 * goal.
+                 */
+                overflow: hidden; 
+            }
+            
+            .social-button {
+                float: left;
+                width: 100px;
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <header>
+                <h1>Hello, World!</h1>
+            </header>
+            
+            <!-- The social button HTML -->
+            <div class="social-button-container">
+                <div class="social-button">
+                    <div class="fb-like" data-href="#" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+                </div>
+                <div class="social-button">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="#" data-text="Social Buttons!">Tweet</a>
+                </div>
+                <div class="social-button">
+                    <div class="g-plusone" data-size="medium" data-width="100" data-href="#"></div>
+                </div>
+                
+                <!-- 
+                    I would normally have to put something like <div class="clear"></div> here
+                    if I was not using overflow: hidden on the .social-button-container. See
+                    the note in the CSS.
+                -->
+            </div>
+            
+            <!-- Our site content -->
+            <div class="content">
+                <p>Look at how those buttons <del><em>don't</em></del> behave!</p>
+            </div>
+        </article>
+        
+        <!-- The JavaScript for each button as provided by Facebook, Twitter, and Google Plus -->
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </body>
+</html>

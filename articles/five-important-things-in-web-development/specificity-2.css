@@ -1,0 +1,9 @@
+/* This selector has a specificity of 111: (body = 1) + (#container = 100) + (.items = 10) = 111 */
+body #container .items {
+    font-weight: bold;
+}
+
+/* This selector has a specificity of 10: (.items = 10) = 10 */
+.items {
+    font-weight: normal;
+}

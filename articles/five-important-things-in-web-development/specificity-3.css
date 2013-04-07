@@ -1,0 +1,5 @@
+/* Notice that there is no space between the ID selector and class selector. This is how you select an
+   element that has both an ID of too-bad-youre-blue and a class of i-want-you-red. */
+#too-bad-youre-blue.i-want-you-red {
+    background-color: red;
+}
