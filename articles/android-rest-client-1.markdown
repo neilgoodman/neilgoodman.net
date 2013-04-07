@@ -1,6 +1,6 @@
 Title: Modern techniques for implementing REST clients on Android 4.0 and below - Part 1
 Author: Neil Goodman
-Category: Android
+Categories: Android
 Date: Sun Dec 25 2011 11:54:00 GMT-0600 (CST)
 
 One of the first tasks I ever had to do as an Android developer was to make a REST client in order to communicate with a web service. It is probably one of the most common problems to solve as a mobile developer. So I thought I would spend some time discussing some of the approaches I've taken and provide some full working examples.

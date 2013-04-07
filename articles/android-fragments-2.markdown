@@ -1,6 +1,6 @@
 Title: Working with Fragments on Android - Part 2
 Author: Neil Goodman
-Category: Android
+Categories: Android
 Date: Mon Mar 12 2012 21:00:00 GMT-0600 (CST)
 
 After a long delay, here is the second part in the Working with Fragments series. If you haven't read the first part then you can do so [here](http://neilgoodman.net/2012/01/29/working-with-fragments-on-android-part-1/).

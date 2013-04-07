@@ -1,6 +1,6 @@
 Title: Making social buttons line up in a row in CSS
 Author: Neil Goodman
-Category: CSS
+Categories: CSS
 Date: Sat Jan 14 2012 11:23:00 GMT-0600 (CST)
 
 I don't have a lot of time for a big blog post today, so I thought I would talk about theming social buttons in CSS. Social buttons are those icons from Facebook, Twitter, etc that allow users to share your site's content by clicking on them. If you have ever had to line them up horizontally in a site design, then you may have had a lot of trouble. Here's how to get those buttons positioned exactly how you want them.

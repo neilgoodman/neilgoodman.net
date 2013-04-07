@@ -1,6 +1,6 @@
 Title: Life Updates (first of many)
 Author: Neil Goodman
-Category: News
+Categories: News
 Date: Sun Mar 11 2012 10:43:00 GMT-0600 (CST)
 
 February (and now March) turned out to be a big month for me.

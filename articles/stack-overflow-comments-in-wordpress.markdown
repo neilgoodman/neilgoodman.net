@@ -1,6 +1,6 @@
 Title: Building Stack Overflow style code blocks on WordPress
 Author: Neil Goodman
-Category: WordPress
+Categories: WordPress
 Date: Sat Jan 07 2012 18:19:00 GMT-0600 (CST)
 
 I knew I was going to be posting a lot of code when I was developing the theme for this blog. I really like how Stack Overflow styles their code blocks and I used their solution as a model for my theme. So, I thought I would go over my implementation for WordPress.

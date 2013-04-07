@@ -1,6 +1,6 @@
 Title: Five Important Things to Know in Web Development
 Author: Neil Goodman
-Category: Web
+Categories: Web
 Date: Sat May 05 2012 17:07:00 GMT-0600 (CST)
 
 Getting back into web development a few months ago inspired me to write a list of topics on the subject. I came up with five things that I think are important for any web developer to at least be aware of.

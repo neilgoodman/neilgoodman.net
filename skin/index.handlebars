@@ -16,6 +16,11 @@
 
                 <a class="more" href="/article/{{name}}">Read more...</a>
             </div>
+        {{else}}
+            <div class="well">
+                <h3>No Articles</h3>
+                <p>There are currently no articles to display. Please check the URL or come back at a later time.</p>
+            </div>
         {{/each}}
     </div>
 
@@ -25,21 +30,30 @@
             {{{markdownEncode description}}}
         </div>
 
-        <div class="well">
-            <h4>Articles</h4>
-            <ul>
-                {{#each articles}}
-                    <li>
-                        <a href="/{{name}}">{{title}}</a>
-                        by
-                        {{author.name}}
+        {{#if articles}}
+            <div class="well">
+                <h4>Articles</h4>
+                <ul>
+                    {{#each articles}}
+                        <li>
+                            <a href="/article/{{name}}">{{title}}</a> by {{author.name}}
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
 
-                        {{#if article.node}}
-                            <span class="versiontag">{{node}}</span>
-                        {{/if}}
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
+        {{#if categories}}
+            <div class="well">
+                <h4>Categories</h4>
+                <ul>
+                    {{#each categories}}
+                        <li>
+                            <a href="/category/{{this}}">{{this}}</a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
     </div>
 </div>

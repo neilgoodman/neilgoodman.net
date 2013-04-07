@@ -1,6 +1,6 @@
 Title: Modern techniques for implementing REST clients on Android 4.0 and below – Part 2
 Author: Neil Goodman
-Category: Android
+Categories: Android
 Date: Sun Jan 01 2012 12:00:00 GMT-0600 (CST)
 
 This is the second and last part of a tutorial on implementing REST clients using modern APIs introduce in Honeycomb and Ice Cream Sandwich. In the [last part](http://neilgoodman.net/2011/12/26/modern-techniques-for-implementing-rest-clients-on-android-4-0-and-below-part-1/) of this tutorial I covered how to make REST calls using Loaders and the LoaderManager class. In this part of the tutorial, I will be covering how to make REST calls using Services and the motivations behind this approach.
