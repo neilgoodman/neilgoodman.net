@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="span8">
+    <div class="span9">
         <div class="well">
             {{#if article.version}}
                 <a class="sha-version" href="/{{article.version}}/{{article.name}}">Static Version</a>
@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="span4">
+    <div class="span3">
         <div class="well">
             <h4>About the Author</h4>
             <img class="headshot" src="{{gravitar author.email 100}}" />
@@ -55,6 +55,15 @@
                     <dt>Links:</dt>
                     <dd>
                         <a href="{{author.homepage}}">Homepage</a>
+                    </dd>
+                </dl>
+            {{/if}}
+
+            {{#if author.markdown}}
+                <dl>
+                    <dt>Description:</dt>
+                    <dd>
+                        {{{markdownEncode author.markdown}}}
                     </dd>
                 </dl>
             {{/if}}

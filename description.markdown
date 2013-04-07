@@ -1,1 +1,1 @@
-Test
+This is my blog for writing about technology and coding.
