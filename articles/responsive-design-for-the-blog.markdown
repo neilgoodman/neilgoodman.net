@@ -1,6 +1,6 @@
 Title: New Responsive Design for The Blog
 Author: Neil Goodman
-Category: News
+Categories: News
 Date: Sun Mar 18 2012 11:39:00 GMT-0600 (CST)
 
 For a while now I've wanted to refactor the theme of this blog to use [CSS3 media queries](http://coding.smashingmagazine.com/2010/07/19/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/) in order to provide better support for mobile devices. This weekend I finally sat down and did it.

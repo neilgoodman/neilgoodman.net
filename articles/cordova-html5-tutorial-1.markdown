@@ -1,6 +1,6 @@
 Title: Building an iOS and Android HTML5 App with Cordova - Part 1
 Author: Neil Goodman
-Category: Cordova
+Categories: Cordova
 Date: Sun Jul 15 2012 12:04:00 GMT-0600 (CST)
 
 This is the first part in my tutorial series on Cordova (aka PhoneGap). I will be focusing on targeting Android and iOS, but I may extend this to Windows Phone in the near future. I'm not sure how long this tutorial will be, but it will be a long one, so please have patience with me while I write this in my spare time.

@@ -1,6 +1,6 @@
 Title: Working with Fragments on Android - Part 1
 Author: Neil Goodman
-Category: Android
+Categories: Android
 Date: Sun Jan 29 2012 17:20:00 GMT-0600 (CST)
 
 [Fragments](http://developer.android.com/guide/topics/fundamentals/fragments.html) were added to the Android SDK when Honeycomb was launched and have since become an important component of modern Android development. This has been helped by the fact that they were also included in the [Android Compatibility Library](http://developer.android.com/sdk/compatibility-library.html) so that OS versions all the way back to Donut could make use of them. Prior to Fragments, an Android app's UI consisted of [Activities](http://developer.android.com/guide/topics/fundamentals/activities.html) and [Views](http://developer.android.com/guide/topics/ui/index.html) (sometimes called widgets in the Android documentation). Fragments allow you to break your Activities into smaller re-usable pieces which are easier to manage and allow for a more fluid visual design that can adapt to tablet and phone resolutions. I'm going to go over the basics of using Fragments in this first part of the tutorial.

@@ -1,6 +1,6 @@
 Title: Thoughts on HTML5 based mobile apps
 Author: Neil Goodman
-Category: Cordova
+Categories: Cordova
 Date: Sun Jul 01 2012 07:34:00 GMT-0600 (CST)
 
 Since the rise of mobile app development, people have been discussing HTML5 vs. native approaches. Apple initially wanted all apps to be web based, refusing to offer a native SDK. Eventually, they realized that wasn't going to be enough and offered their current Objective-C based solution. Google has offered its Java based native SDK since the beginning of Android, but they obviously have a lot to offer in the way of web SDKs.
