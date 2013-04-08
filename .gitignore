@@ -3,6 +3,7 @@ neilgoodman.net.sublime-workspace
 
 # Node Modules #
 node_modules/*
+npm-debug.log
 
 # Assets #
 builtAssets

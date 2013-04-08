@@ -43,6 +43,27 @@
                 </dl>
             {{/if}}
 
+            {{#if author.facebook}}
+                <dl>
+                    <dt>Facebook:</dt>
+                    <dd>{{facebook author.facebook}}
+                </dl>
+            {{/if}}
+
+            {{#if author.linkedin}}
+                <dl>
+                    <dt>LinkedIn:</dt>
+                    <dd>{{linkedin author.linkedin}}
+                </dl>
+            {{/if}}
+
+            {{#if author.googleplus}}
+                <dl>
+                    <dt>Google Plus:</dt>
+                    <dd>{{googleplus author.googleplus author.name}}
+                </dl>
+            {{/if}}
+
             {{#if author.location}}
                 <dl>
                     <dt>Location:</dt>
@@ -124,7 +145,7 @@
 
         <div class="well">
             <h4>Description</h4>
-            {{{markdownEncode description}}}
+            {{{markdownEncode description.markdown}}}
         </div>
     </div>
 </div>
