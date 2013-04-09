@@ -8,8 +8,8 @@ var less = require('less'),
     wheat = require('wheat');
 
 var app = connect();
+
 app
-    .use(connect.compress())
     .use(connectAssets({
         src: __dirname + '/skin/assets'
     }))
@@ -25,9 +25,14 @@ app
         
         var wheatProcess = wheat(__dirname);
         wheatProcess.call(this, req, res, next);
-    })
-    .use(connect.errorHandler({
+    });
+
+
+if (process.env.NODE_ENV != 'production') {
+    app.use(connect.errorHandler({
         showStack: true,
         dumpExceptions: true
-    }))
-    .listen(process.env.PORT || 3000);
+    }));
+}
+
+app.listen(3000);
