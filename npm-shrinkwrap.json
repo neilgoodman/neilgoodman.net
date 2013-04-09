@@ -3,66 +3,64 @@
   "version": "1.0.0",
   "dependencies": {
     "wheat": {
-      "version": "0.2.6",
+      "version": "0.2.6"
+    },
+    "git-fs": {
+      "version": "0.0.10",
+      "from": "git-fs@0.0.10"
+    },
+    "simple-mime": {
+      "version": "0.0.8",
+      "from": "simple-mime@0.0.8"
+    },
+    "handlebars": {
+      "version": "1.0.10",
+      "from": "handlebars@1.0.10",
+      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-1.0.10.tgz",
       "dependencies": {
-        "git-fs": {
-          "version": "0.0.10",
-          "from": "git-fs@0.0.10"
-        },
-        "simple-mime": {
-          "version": "0.0.8",
-          "from": "simple-mime@0.0.8"
-        },
-        "handlebars": {
-          "version": "1.0.10",
-          "from": "handlebars@1.0.10",
-          "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-1.0.10.tgz",
+        "optimist": {
+          "version": "0.3.7",
+          "from": "optimist@~0.3",
           "dependencies": {
-            "optimist": {
-              "version": "0.3.7",
-              "from": "optimist@~0.3",
-              "dependencies": {
-                "wordwrap": {
-                  "version": "0.0.2",
-                  "from": "wordwrap@~0.0.2"
-                }
-              }
-            },
-            "uglify-js": {
-              "version": "1.2.6",
-              "from": "uglify-js@~1.2"
+            "wordwrap": {
+              "version": "0.0.2",
+              "from": "wordwrap@~0.0.2"
             }
           }
         },
-        "step": {
-          "version": "0.0.5",
-          "from": "step@0.0.5"
-        },
-        "datetime": {
-          "version": "0.0.3",
-          "from": "datetime@0.0.3",
-          "dependencies": {
-            "vows": {
-              "version": "0.7.0",
-              "from": "vows@>=0.5.4",
-              "dependencies": {
-                "eyes": {
-                  "version": "0.1.8",
-                  "from": "eyes@>=0.1.6"
-                },
-                "diff": {
-                  "version": "1.0.4",
-                  "from": "diff@~1.0.3"
-                }
-              }
-            }
-          }
-        },
-        "underscore": {
-          "version": "1.4.4",
-          "from": "underscore@1.4.4"
+        "uglify-js": {
+          "version": "1.2.6",
+          "from": "uglify-js@~1.2"
         }
       }
+    },
+    "step": {
+      "version": "0.0.5",
+      "from": "step@0.0.5"
+    },
+    "datetime": {
+      "version": "0.0.3",
+      "from": "datetime@0.0.3",
+      "dependencies": {
+        "vows": {
+          "version": "0.7.0",
+          "from": "vows@>=0.5.4",
+          "dependencies": {
+            "eyes": {
+              "version": "0.1.8",
+              "from": "eyes@>=0.1.6"
+            },
+            "diff": {
+              "version": "1.0.4",
+              "from": "diff@~1.0.3"
+            }
+          }
+        }
+      }
+    },
+    "underscore": {
+      "version": "1.4.4",
+      "from": "underscore@1.4.4"
     },
     "connect": {
       "version": "2.7.4",

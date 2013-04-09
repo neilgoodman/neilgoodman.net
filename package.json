@@ -12,6 +12,9 @@
 		"node": ">=0.8.x",
   		"npm": ">=1.1.2"
 	},
+	"bundledDependencies": [
+		"wheat"
+	],
 	"dependencies": {
 		"wheat": "0.2.6",
 		"connect": ">=2.7.3",
