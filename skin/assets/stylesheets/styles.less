@@ -1,22 +1,30 @@
+/* Color Scheme */
+@blue:      #4272A1;
+@green:     #4EAFA6;
+@yellow:    #D8D46A;
+@creme:     #F5F4ED;
+@black:     #464541;
+
+/* Fonts */
+@altFontFamily: "Montserrat", Helvetica, Arial, sans-serif;
+@textColor:     @black;
+@linkColor:     @blue;
+
+/* Headers */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: "Mission Gothic";
-}
-
-h1,
-h2,
-h3 {
-    font-weight: 300;
+    font-family: @altFontFamily;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
 }
 
 h4,
 h5,
 h6 {
-    font-weight: 100;
     text-transform: uppercase;
 }
 
@@ -65,22 +73,29 @@ pre.prettyprint {
 }
 
 #side_navigation {
-    font-family: "Mission Gothic";
-    font-weight: 300;
+    height: auto;
+    width: auto;
+    padding: 140px 23px 10px;
+    background-color: @black;
+    font-family: @altFontFamily;
+    font-weight: 400;
     text-transform: uppercase;
 
-    dt {
-        font-size: 20px;
-        line-height: 30px;
-        font-weight: 300;
+    h1 {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 400;
+        color: @white;
+        margin: 0 0 2px 0;
     }
 
-    dd {
-        font-size: 15px;
+    ul li {
+        font-size: 14px;
         line-height: 22px;
-    }
 
-    a {
-        text-decoration: none;
+        a {
+            color: @white;
+            text-decoration: none;
+        }
     }
 }
