@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="span8">
+        <div class="well">
+            {{{markdownEncode page.markdown}}}
+        </div>
+    </div>
+
+    <div class="span4">
+        <div class="well">
+            <h4>About the Author</h4>
+            <img class="headshot" src="{{gravitar author.email 100}}" />
+        
+            <dl>
+                <dt>Name:</dt>
+                <dd>{{author.name}}</dd>
+            </dl>
+
+            {{#if author.github}}
+                <dl>
+                    <dt>Github:</dt>
+                    <dd>{{github author.github}}</dd>
+                </dl>
+            {{/if}}
+
+            {{#if author.bitbucket}}
+                <dl>
+                    <dt>BitBucket:</dt>
+                    <dd>{{bitbucket author.bitbucket}}</dd>
+                </dl>
+            {{/if}}
+
+            {{#if author.twitter}}
+                <dl>
+                    <dt>Twitter:</dt>
+                    <dd>{{twitter author.twitter}}
+                </dl>
+            {{/if}}
+
+            {{#if author.facebook}}
+                <dl>
+                    <dt>Facebook:</dt>
+                    <dd>{{facebook author.facebook}}
+                </dl>
+            {{/if}}
+
+            {{#if author.linkedin}}
+                <dl>
+                    <dt>LinkedIn:</dt>
+                    <dd>{{linkedin author.linkedin}}
+                </dl>
+            {{/if}}
+
+            {{#if author.googleplus}}
+                <dl>
+                    <dt>Google Plus:</dt>
+                    <dd>{{googleplus author.googleplus author.name}}
+                </dl>
+            {{/if}}
+
+            {{#if author.location}}
+                <dl>
+                    <dt>Location:</dt>
+                    <dd>{{author.location}}</dd>
+                </dl>
+            {{/if}}
+
+            {{#if author.homepage}}
+                <dl>
+                    <dt>Links:</dt>
+                    <dd>
+                        <a href="{{author.homepage}}">Homepage</a>
+                    </dd>
+                </dl>
+            {{/if}}
+        </div>
+
+        <div class="well">
+            <h4>Description</h4>
+            {{{markdownEncode description.markdown}}}
+        </div>
+    </div>
+</div>
