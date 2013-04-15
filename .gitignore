@@ -17,3 +17,7 @@ builtAssets
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Scripts #
+start.sh
+debug.sh
