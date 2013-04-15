@@ -2,3 +2,6 @@
 [submodule "node_modules/wheat"]
 	path = node_modules/wheat
 	url = https://github.com/posco2k8/wheat.git
+[submodule "node_modules/connect-user-tweets"]
+	path = node_modules/connect-user-tweets
+	url = https://github.com/posco2k8/connect-user-tweets.git

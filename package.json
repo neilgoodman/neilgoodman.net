@@ -13,12 +13,14 @@
   		"npm": ">=1.1.2"
 	},
 	"bundledDependencies": [
-		"wheat"
+		"wheat",
+		"connect-user-tweets"
 	],
 	"dependencies": {
 		"wheat": "0.2.6",
 		"connect": ">=2.7.3",
 		"connect-assets": ">=2.4.1",
-		"less": ">=1.3.3"
+		"less": ">=1.3.3",
+		"connect-user-tweets": "git://github.com/posco2k8/connect-user-tweets.git"
 	}
 }
