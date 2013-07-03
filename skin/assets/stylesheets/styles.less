@@ -1,3 +1,32 @@
+// Colors
+@textColor: #464541;
+@linkColor: #78A8C4;
+@linkColorHover: #D4B05F;
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Crete+Round:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+@sansFontFamily: 'Helvetica Neue', 'Helvetica', sans-serif;
+@serifFontFamily: 'Crete Round', serif;
+
+.header-font(@bold: 400) {
+    font-family: e("'Crete Round', serif");
+    font-weight: @bold;
+}
+
+.subheader-font(@bold: 400) {
+    font-family: e("'Montserrat', sans-serif");
+    font-weight: @bold;
+    letter-spacing: 1px;
+}
+
+// Base styles
+
+a:hover {
+    text-decoration: none;
+}
+
 pre.prettyprint {
     overflow: auto;
 
@@ -39,5 +68,54 @@ pre.prettyprint {
         color: @white;
         text-decoration: none;
         background-color: rgba(255, 255, 255, .6);
+    }
+}
+
+.nav-sidebar-container {
+    .nav-masthead {
+        padding-top: 72px;
+        background-color: @textColor;
+        height: 56px;
+
+        h1 {
+            .header-font();
+            text-align: center;
+            margin: 0;
+            font-size: 25px;
+            color: @white;
+            line-height: 0;
+            letter-spacing: 2px;
+        }
+
+        small {
+            .subheader-font();
+            display: block;
+            text-align: center;
+            font-size: 9px;
+            text-transform: uppercase;
+            color: @white;
+            line-height: 44px;
+        }
+    }
+
+    .nav {
+        .clearfix();
+        margin-top: 13px;
+        margin-bottom: 60px;
+
+        li {
+            width: 33.333333%;
+            float: left;
+
+            a {
+                font-size: 13px;
+
+                &,
+                &:hover {
+                    color: @textColor;
+                    text-transform: uppercase;
+                }
+            }
+        }
     }
 }

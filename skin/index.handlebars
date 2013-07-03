@@ -24,7 +24,9 @@
         {{/each}}
     </div>
 
-    <div class="span4">
+    <div class="offset1 span3">
+        {{> sidebar-nav}}
+
         <div class="well">
             <h4>Description</h4>
             {{{markdownEncode description.markdown}}}
