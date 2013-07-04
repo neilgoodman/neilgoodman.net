@@ -1,0 +1,15 @@
+{{#if categories}}
+    <!-- Category Sidebar -->
+    <div class="sidebar-categories">
+        <hr class="divider" />
+        <h4 class="sidebar-header">Categories</h4>
+
+        <ul class="sidebar-list">
+            {{#each categories}}
+                <li>
+                    <a href="/category/{{this}}">{{this}}</a>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+{{/if}}

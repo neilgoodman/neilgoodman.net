@@ -1,85 +1,28 @@
 <div class="row">
     <div class="span8">
-        <div class="well">
-            {{#if article.version}}
-                <a class="sha-version" href="/{{article.version}}/{{article.name}}">Static Version</a>
-            {{/if}}
-            <h1>
-                <a href="/article/{{article.name}}">{{article.title}}</a>
-            </h1>
+        <div class="article">
+                <hr class="divider" />
 
-            {{{markdownEncode article.markdown}}}
+                <h1>
+                    <a href="/article/{{article.name}}">{{title}}</a>
+                </h1>
+
+                <ul class="meta">
+                    <li><i class="icon-calendar"></i> {{formatDate article.date "%B %d%k, %Y"}}</li>
+
+                    {{#if article.categories}}
+                        <li><i class="icon-tags"></i> {{categoryList article.categories}}</li>
+                    {{/if}}
+
+                    <li><i class="icon-comment"></i> <a href="/article/{{name}}#disqus_thread">0</a></li>
+                </ul>
+
+                {{{markdownEncode article.markdown}}}
         </div>
     </div>
 
-    <div class="span4">
-        <div class="well">
-            <h4>About the Author</h4>
-            <img class="headshot" src="{{gravitar author.email 100}}" />
-        
-            <dl>
-                <dt>Name:</dt>
-                <dd>{{author.name}}</dd>
-            </dl>
-
-            {{#if author.github}}
-                <dl>
-                    <dt>Github:</dt>
-                    <dd>{{github author.github}}</dd>
-                </dl>
-            {{/if}}
-
-            {{#if author.bitbucket}}
-                <dl>
-                    <dt>BitBucket:</dt>
-                    <dd>{{bitbucket author.bitbucket}}</dd>
-                </dl>
-            {{/if}}
-
-            {{#if author.twitter}}
-                <dl>
-                    <dt>Twitter:</dt>
-                    <dd>{{twitter author.twitter}}
-                </dl>
-            {{/if}}
-
-            {{#if author.facebook}}
-                <dl>
-                    <dt>Facebook:</dt>
-                    <dd>{{facebook author.facebook}}
-                </dl>
-            {{/if}}
-
-            {{#if author.linkedin}}
-                <dl>
-                    <dt>LinkedIn:</dt>
-                    <dd>{{linkedin author.linkedin}}
-                </dl>
-            {{/if}}
-
-            {{#if author.googleplus}}
-                <dl>
-                    <dt>Google Plus:</dt>
-                    <dd>{{googleplus author.googleplus author.name}}
-                </dl>
-            {{/if}}
-
-            {{#if author.location}}
-                <dl>
-                    <dt>Location:</dt>
-                    <dd>{{author.location}}</dd>
-                </dl>
-            {{/if}}
-
-            {{#if author.homepage}}
-                <dl>
-                    <dt>Links:</dt>
-                    <dd>
-                        <a href="{{author.homepage}}">Homepage</a>
-                    </dd>
-                </dl>
-            {{/if}}
-        </div>
+    <div class="offset1 span3">
+        {{> masthead}}
 
         <div class="well">
             <h4>About this Article</h4>

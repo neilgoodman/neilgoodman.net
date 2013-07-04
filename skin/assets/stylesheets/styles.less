@@ -14,12 +14,14 @@
 .header-font(@bold: 400) {
     font-family: e("'Crete Round', serif");
     font-weight: @bold;
+    -webkit-font-smoothing: antialiased;
 }
 
 .subheader-font(@bold: 400) {
     font-family: e("'Montserrat', sans-serif");
     font-weight: @bold;
     letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
 }
 
 // Base styles
@@ -98,6 +100,7 @@ p {
             float: left;
 
             a {
+                .subheader-font();
                 font-size: 13px;
 
                 &,
@@ -147,12 +150,62 @@ p {
             }
         }
 
+        .spinner {
+            width: 20px !important;
+            height: 20px !important;
+        }
+
         li {
             margin-bottom: 30px;
         }
 
         li:last-child {
             margin-bottom: 0;
+        }
+    }
+}
+
+.sidebar-contact {
+    .contact-list {
+        .clearfix();
+        list-style: none;
+        margin: 0;
+
+        li {
+            float: left;
+            width: 25%;
+            text-align: left;
+
+            .rss-icon {
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                background: url('../images/rss.png') no-repeat;
+            }
+
+            .linkedin-icon {
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                background: url('../images/linkedin.png') no-repeat;
+  
+            }
+
+            .twitter-icon {
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                background: url('../images/twitter.png') no-repeat;
+  
+            }
+
+            .github-icon {
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                background: url('../images/github.png') no-repeat;
+  
+            }
         }
     }
 }
@@ -168,6 +221,8 @@ p {
         margin: 0 0 20px 0;
 
         li {
+            .subheader-font();
+            font-size: 13px;
             float: left;
             margin-right: 20px;
 
@@ -181,6 +236,7 @@ p {
         font-style: italic;
     }
 
+    h1,
     h3 {
         .header-font();
         font-size: 30px;
@@ -188,6 +244,11 @@ p {
         a {
             color: @textColor;
         }
+    }
+
+    h2 {
+        .header-font();
+        font-size: 26px;
     }
 }
 

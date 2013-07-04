@@ -26,8 +26,11 @@
             </div>
         {{else}}
             <div class="article">
+                <hr class="divider" />
+
                 <h3>No Articles</h3>
-                <p>There are currently no articles to display. Please check the URL or come back at a later time.</p>
+                
+                <p>There are currently no articles to display.</p>
             </div>
         {{/each}}
     </div>
@@ -35,29 +38,8 @@
     <!-- Sidebar -->
     <div class="offset1 span3">
         {{> masthead}}
-
-        <!-- Twitter Sidebar -->
-        <div class="sidebar-tweets">
-            <hr class="divider" />
-            <h4 class="sidebar-header">Recent Tweets</h4>
-
-            <div class="tweet-list"></div>
-        </div>
-
-        {{#if categories}}
-            <!-- Category Sidebar -->
-            <div class="sidebar-categories">
-                <hr class="divider" />
-                <h4 class="sidebar-header">Categories</h4>
-
-                <ul class="sidebar-list">
-                    {{#each categories}}
-                        <li>
-                            <a href="/category/{{this}}">{{this}}</a>
-                        </li>
-                    {{/each}}
-                </ul>
-            </div>
-        {{/if}}
+        {{> sidebar-tweets}}
+        {{> sidebar-contact}}
+        {{> sidebar-categories}}
     </div>
 </div>
