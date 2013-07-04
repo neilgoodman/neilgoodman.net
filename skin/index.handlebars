@@ -10,8 +10,12 @@
 
                 <ul class="meta">
                     <li><i class="icon-calendar"></i> {{formatDate date "%B %d%k, %Y"}}</li>
-                    <li><i class="icon-tags"></i> </li>
-                    <li><i class="icon-comment"></i> </li>
+
+                    {{#if categories}}
+                        <li><i class="icon-tags"></i> {{categoryList categories}}</li>
+                    {{/if}}
+
+                    <li><i class="icon-comment"></i> <a href="/article/{{name}}#disqus_thread">0</a></li>
                 </ul>
 
                 {{{intro markdown}}}
@@ -28,22 +32,6 @@
 
     <div class="offset1 span3">
         {{> masthead}}
-
-        {{#if articles}}
-            <div class="sidebar-articles">
-                <hr class="divider" />
-
-                <h4 class="sidebar-header">Articles</h4>
-                
-                <ul class="sidebar-list">
-                    {{#each articles}}
-                        <li>
-                            <a href="/article/{{name}}">{{title}}</a>
-                        </li>
-                    {{/each}}
-                </ul>
-            </div>
-        {{/if}}
 
         {{#if categories}}
             <div class="sidebar-categories">
