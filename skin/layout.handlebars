@@ -93,15 +93,26 @@
             <meta name="twitter:site" content="@{{description.author.twitter}}">
         {{/if}} 
 
+        <!-- RSS Feed -->
         <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed.xml">
 
+        <!-- Assets -->
         {{js "javascripts"}}
         {{css "stylesheets"}}
 
-        <script type="text/javascript">
-            $(function () {
-                prettyPrint();
-            });
+        <!-- Client Templates -->
+        <script data-template-name="tweet-list" type="text/x-underscore-template">
+            <ul class="sidebar-list">
+                <% _.each(tweets, function (tweet) { %>
+                    <li>
+                        <i class="icon-chevron-right"></i>
+                        <div class="tweet">
+                            <%= parseTweet(tweet.text) %>
+                            <div class="timeago"><a href="//twitter.com/<%= tweet.user.screen_name %>/status/<%= tweet.id_str %>"><%= moment(tweet.created_at).fromNow() %></a> via <%= tweet.source %></div>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
         </script>
     </head>
     <body>

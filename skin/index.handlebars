@@ -1,4 +1,6 @@
 <div class="row">
+
+    <!-- Content -->
     <div class="span8">
         {{#each articles}}
             <div class="article">
@@ -30,13 +32,22 @@
         {{/each}}
     </div>
 
+    <!-- Sidebar -->
     <div class="offset1 span3">
         {{> masthead}}
 
+        <!-- Twitter Sidebar -->
+        <div class="sidebar-tweets">
+            <hr class="divider" />
+            <h4 class="sidebar-header">Recent Tweets</h4>
+
+            <div class="tweet-list"></div>
+        </div>
+
         {{#if categories}}
+            <!-- Category Sidebar -->
             <div class="sidebar-categories">
                 <hr class="divider" />
-                
                 <h4 class="sidebar-header">Categories</h4>
 
                 <ul class="sidebar-list">
