@@ -14,81 +14,20 @@
                         <li><i class="icon-tags"></i> {{categoryList article.categories}}</li>
                     {{/if}}
 
-                    <li><i class="icon-comment"></i> <a href="/article/{{name}}#disqus_thread">0</a></li>
+                    <li><i class="icon-comment"></i> <a href="/article/{{article.name}}#disqus_thread">Comments</a></li>
                 </ul>
 
                 {{{markdownEncode article.markdown}}}
         </div>
+
+        {{> comments}}
     </div>
 
     <div class="offset1 span3">
         {{> masthead}}
 
-        <div class="well">
-            <h4>About this Article</h4>
-            <a class="twitter-share-button" href="http://twitter.com/share" data-count="horizontal" data-via="posco2k8">Tweet</a>
-            <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-
-            {{#if article.date}}
-                <dl title="article.date">
-                    <dt>Date Released:</dt>
-                    <dd>{{formatDate article.date "%A, %B %e, %Y"}}</dd>
-                </dl>
-            {{/if}}
-
-            {{#if article.lastUpdated}}
-                <dl title="{{article.lastUpdated}}}">
-                    <dt>Last Updated:</dt>
-                    <dd>{{formatDate article.lastUpdated "%A, %B %e, %Y"}}</dd>
-                </dl>
-            {{/if}}
-
-            {{#if article.uniqueSnippets}}
-                <dl>
-                    <dt>Code Samples:</dt>
-                        <dd>
-                        <ul>
-                            {{#each article.uniqueSnippets}}
-                            <li>
-                                <a href="{{filename}}">{{base}}</a>
-                            </li>
-                            {{/each}}
-                        </ul>
-                    </dd>
-                </dl>
-            {{/if}}
-
-            <dl>
-                <dt>Revisions:</dt>
-                <dd>
-                    <ul>
-                    {{#each article.log}}
-                        <li title="{{message}}">
-                            <a href="/{{@key}}/{{../article.name}}">{{date}}</a>
-                        </li>
-                    {{/each}}
-                    </ul>
-                </dd>
-            </dl>
-
-            {{#if article.related}}
-                <h4>Other Articles by this Author</h4>
-                <ul>
-                    {{#each article.related}}
-                        <li>
-                            <a href="/{{name}}">{{title}}</a>
-                            {{#if node}}
-                                <span class="versiontag">{{node}}</span>
-                            {{/if}}
-                        </li>
-                    {{/each}}
-                </ul>
-            {{/if}}
-        </div>
-
-        <div class="well">
-            <h4>Description</h4>
-            {{{markdownEncode description.markdown}}}
-        </div>
+        {{> sidebar-share}}
+        {{> sidebar-article-information}}
+        {{> sidebar-contact}}
     </div>
 </div>

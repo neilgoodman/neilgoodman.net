@@ -28,12 +28,10 @@ $(function () {
 $(function () {
     "use strict";
 
-    setupSpinner();
-
-    // Templates
     var tweetListTemplate = _.template($('[data-template-name="tweet-list"]').html()),
         success = function (tweets) {
-            var $tweetList = $($.parseHTML(tweetListTemplate({ tweets: tweets })));
+            var tweetList = tweetListTemplate({ tweets: tweets }),
+                $tweetList = $($.parseHTML(tweetList));
 
             $('.tweet-list')
                 .empty()
@@ -44,24 +42,31 @@ $(function () {
             });
         };
 
+    // Display loading throbber.
+    setupSpinner();
+
     // Request tweets through local proxy.
     $.get('/tweets', success, 'json');
 });
 
 // Client-side template helpers
 function parseTweet(tweet) {
-    var userNamesPattern = /@([A-Za-z0-9_]{1,15})/gi,
+    "use strict";
+
+    var userNamePattern = /@([^" ]+)/gi,
         linkPattern = /(http:\/\/[^" ]+)/gi,
         hashtagPattern = /#([^" ]+)/gi;
 
     tweet = tweet.replace(linkPattern, '<a target="_blank" href="$1">$&</a>');
     tweet = tweet.replace(hashtagPattern, '<a target="_blank" href="//twitter.com/search?q=%23$1&amp;src=hash">$&</a>')
-    tweet = tweet.replace(userNamesPattern, '<a target="_blank" href="//twitter.com/$1">$&</a>');
+    tweet = tweet.replace(userNamePattern, '<a target="_blank" href="//twitter.com/$1">$&</a>');
 
     return tweet;
 }
 
 function setupSpinner() {
+    "use strict";
+
     var opts = {
         lines: 13, // The number of lines to draw
         length: 6, // The length of each line

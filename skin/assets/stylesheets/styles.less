@@ -3,6 +3,7 @@
 @linkColor: #78A8C4;
 @linkColorHover: #D4B05F;
 @footerTextColor: #99978F;
+@codeLinkColor: #78A8C4;
 
 // Fonts
 @import url(http://fonts.googleapis.com/css?family=Crete+Round:400,400italic);
@@ -31,7 +32,9 @@ a:hover {
 }
 
 pre.prettyprint {
+    .border-radius(0);
     overflow: auto;
+    border: none;
 
     &::-webkit-scrollbar {
         -webkit-appearance: none;
@@ -49,6 +52,32 @@ pre.prettyprint {
     code {
         white-space: pre;
         word-wrap: normal;
+    }
+}
+
+.snippet {
+    position: relative;
+    background: @grayDark;
+    padding-top: 40px;
+}
+
+.code-link {
+    .transition(all .3s linear);
+    .subheader-font();
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: @codeLinkColor;
+    text-transform: uppercase;
+    color: @white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 5px 10px;
+
+    &:hover {
+        color: @white;
+        background-color: darken(@codeLinkColor, 10%);
     }
 }
 
@@ -117,6 +146,7 @@ p {
 .sidebar-list {
     list-style: none;
     margin: 0;
+    font-size: 13px;
 
     li {
         margin-bottom: 10px;
@@ -210,11 +240,57 @@ p {
     }
 }
 
-.article {
+.sidebar-share {
+    .social-list {
+        .clearfix();
+        list-style: none;
+        margin: 0 0 40px 0;
+
+        li {
+            float: left;
+            width: 33.333333%;
+
+            &.facebook {
+                text-align: left;
+                vertical-align: bottom;
+            }
+
+            &.twitter {
+                text-align: center;
+                vertical-align: bottom;
+            }
+
+            &.google-plus {
+                text-align: right;
+                vertical-align: bottom;
+            }
+        }
+    }
+}
+
+.sidebar-article-information {
+    .information {
+        margin: -15px 0 30px 0;
+        font-size: 13px;
+    }
+
+    ul.information {
+        list-style: none;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.article,
+.page {
     .divider {
         margin-top: 62px;
     }
+}
 
+.article {
     .meta {
         .clearfix();
         list-style: none;
@@ -249,28 +325,6 @@ p {
     h2 {
         .header-font();
         font-size: 26px;
-    }
-}
-
-.snippet {
-    position: relative;
-}
-
-.code-link {
-    position: absolute;
-    right: 0;
-    border: 1px solid transparent;
-    background-color: rgba(255, 255, 255, .5);
-    color: @white;
-    text-decoration: none;
-    padding: 5px 10px;
-    .border-radius(0 0 0 4px);
-    .transition(all .3s linear);
-
-    &:hover {
-        color: @white;
-        text-decoration: none;
-        background-color: rgba(255, 255, 255, .6);
     }
 }
 

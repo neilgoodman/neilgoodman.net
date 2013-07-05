@@ -1,0 +1,34 @@
+<!-- Article Information -->
+<div class="sidebar-article-information">
+    <hr class="divider" />
+
+    {{#if article.date}}
+        <h4 class="sidebar-header">Date Released</h4>
+        <p class="information">{{formatDate article.date "%A, %B %e, %Y"}}</p>
+    {{/if}}
+
+    {{#if article.lastUpdated}}
+        <h4 class="sidebar-header">Last Updated</h4>
+        <p class="information">{{formatDate article.lastUpdated "%A, %B %e, %Y"}}</p>
+    {{/if}}
+
+    {{#if article.uniqueSnippets}}
+        <h4 class="sidebar-header">Code Samples:</h4>
+        <ul class="information">
+            {{#each article.uniqueSnippets}}
+                <li>
+                    <a href="{{filename}}">{{base}}</a>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+
+    <h4 class="sidebar-header">Revisions</h4>
+    <ul class="information">
+        {{#each article.log}}
+            <li>
+                <a href="/{{@key}}/{{../article.name}}">{{date}}</a>
+            </li>
+        {{/each}}
+    </ul>
+</div>
