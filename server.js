@@ -6,11 +6,13 @@ var less = require('less'),
     connect = require('connect'),
     connectAssets = require('connect-assets'),
     connectUserTweets = require('connect-user-tweets'),
+    connectGzip = require('connect-gzip'),
     wheat = require('wheat');
 
 var app = connect();
 
 app
+    .use(connectGzip.gzip())
     .use(connectAssets({
         src: __dirname + '/skin/assets'
     }))

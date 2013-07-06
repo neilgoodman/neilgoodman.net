@@ -8,11 +8,11 @@ My passion is software development, but more specifically I work in the areas of
 
 ## About This Site
 
-I taught myself how to program by reading blogs, tutorials, and online books throughout high school and college. This blog is my attempt to contribute back to that growing knowlege base and hopefully help other people do the same.
+I taught myself how to program by reading blogs, tutorials, and online books throughout high school and college. This is my attempt to contribute back to that growing knowlege base and hopefully help other people do the same.
 
 This blog has been built using a custom version of [Wheat](//github.com/creationix/wheat), which runs on [Git](//git-scm.com) and [Node.js](//nodejs.org). The source code for this site is [here](//github.com/posco2k8/neilgoodman.net). I modified ```Wheat``` so that I could enable its rendering engine to run on my preferred front-end stack: [Handlebars](//handlebarsjs.com/), [LESS](//lesscss.org/), and [Twitter Bootstrap](//twitter.github.io/bootstrap/). The source code for my version of ```Wheat``` is [here](https://github.com/posco2k8/wheat).
 
-This blog has been designed by my lovely and very talented girlfriend [Hannah](//hannahfass.com).
+This site has been designed by my lovely and very talented girlfriend [Hannah](//hannahfass.com).
 
 ## Interests
 
