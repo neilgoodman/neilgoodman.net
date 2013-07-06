@@ -1,4 +1,5 @@
 // Colors
+
 @textColor: #464541;
 @linkColor: #78A8C4;
 @linkColorHover: #D4B05F;
@@ -6,6 +7,7 @@
 @codeLinkColor: #78A8C4;
 
 // Fonts
+
 @import url(http://fonts.googleapis.com/css?family=Crete+Round:400,400italic);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
@@ -25,33 +27,31 @@
     -webkit-font-smoothing: antialiased;
 }
 
-// Base styles
+// Styles
+
+html,
+body {
+    height: 100%;
+}
 
 a:hover {
     text-decoration: none;
 }
 
-pre.prettyprint {
-    .border-radius(0);
-    overflow: auto;
-    border: none;
+p {
+    margin-bottom: 25px;
+}
 
-    &::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 11px;
-        height: 11px;
-    }
+.main {
+    // Sticky footer solution:
+    // http://css-tricks.com/snippets/css/sticky-footer/
+    min-height: 100%;
+    margin-bottom: -122px;
 
-    &::-webkit-scrollbar-thumb {
-        border-radius: 8px;
-        border: 2px solid @grayDark;
-        background-color: rgba(255, 255, 255, .5);
-    }
-
-    &,
-    code {
-        white-space: pre;
-        word-wrap: normal;
+    &:after {
+        content: "";
+        display: block;
+        height: 122px;
     }
 }
 
@@ -59,30 +59,50 @@ pre.prettyprint {
     position: relative;
     background: @grayDark;
     padding-top: 40px;
-}
 
-.code-link {
-    .transition(all .3s linear);
-    .subheader-font();
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background: @codeLinkColor;
-    text-transform: uppercase;
-    color: @white;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0;
-    padding: 5px 10px;
+    pre.prettyprint {
+        .border-radius(0);
+        overflow: auto;
+        border: none;
 
-    &:hover {
-        color: @white;
-        background-color: darken(@codeLinkColor, 10%);
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 11px;
+            height: 11px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            border: 2px solid @grayDark;
+            background-color: rgba(255, 255, 255, .5);
+        }
+
+        &,
+        code {
+            white-space: pre;
+            word-wrap: normal;
+        }
     }
-}
 
-p {
-    margin-bottom: 25px;
+    .code-link {
+        .transition(all .3s linear);
+        .subheader-font();
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background: @codeLinkColor;
+        text-transform: uppercase;
+        color: @white;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0;
+        padding: 5px 10px;
+
+        &:hover {
+            color: @white;
+            background-color: darken(@codeLinkColor, 10%);
+        }
+    }
 }
 
 .divider {
@@ -90,6 +110,23 @@ p {
     height: 10px;
     margin-top: 40px;
     margin-bottom: 10px;
+}
+
+.sidebar-list {
+    list-style: none;
+    margin: 0;
+    font-size: 13px;
+
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+.sidebar-header {
+    .subheader-font();
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .sidebar-masthead {
@@ -143,23 +180,6 @@ p {
     }
 }
 
-.sidebar-list {
-    list-style: none;
-    margin: 0;
-    font-size: 13px;
-
-    li {
-        margin-bottom: 10px;
-    }
-}
-
-.sidebar-header {
-    .subheader-font();
-    font-size: 13px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
 .sidebar-tweets {
     .tweet-list {
         .clearfix();
@@ -171,6 +191,8 @@ p {
         }
 
         .tweet {
+            // Fill remaining width after float:
+            // http://jsfiddle.net/posco2k8/vu8dV/
             overflow: hidden;
             font-size: 13px;
 
@@ -245,9 +267,11 @@ p {
         .clearfix();
         list-style: none;
         margin: 0 0 40px 0;
+        height: 70px;
 
         li {
             float: left;
+            display: block;
             width: 33.333333%;
 
             &.facebook {
@@ -288,6 +312,21 @@ p {
     .divider {
         margin-top: 62px;
     }
+
+    h1,
+    h3 {
+        .header-font();
+        font-size: 30px;
+
+        a {
+            color: @textColor;
+        }
+    }
+
+    h2 {
+        .header-font();
+        font-size: 26px;
+    }
 }
 
 .article {
@@ -311,29 +350,15 @@ p {
     .more {
         font-style: italic;
     }
-
-    h1,
-    h3 {
-        .header-font();
-        font-size: 30px;
-
-        a {
-            color: @textColor;
-        }
-    }
-
-    h2 {
-        .header-font();
-        font-size: 26px;
-    }
 }
 
 .footer {
     background-color: @textColor;
     padding: 20px 0;
+    height: 22px;
+    margin-top: 60px;
     font-size: 11px;
     text-transform: uppercase;
-    margin-top: 62px;
     color: @footerTextColor;
     font-weight: bold;
 

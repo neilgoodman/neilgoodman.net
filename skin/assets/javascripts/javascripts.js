@@ -3,6 +3,7 @@
 //= require prettify
 //= require moment
 //= require spin
+//= require modernizr
 //= require bootstrap/bootstrap-affix
 //= require bootstrap/bootstrap-alert
 //= require bootstrap/bootstrap-button

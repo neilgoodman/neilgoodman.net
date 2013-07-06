@@ -1,6 +1,8 @@
 <div class="row">
+
+    <!-- Main -->
     <div class="span8">
-        <div class="article">
+        <article class="article">
                 <hr class="divider" />
 
                 <h1>
@@ -18,11 +20,12 @@
                 </ul>
 
                 {{{markdownEncode article.markdown}}}
-        </div>
+        </article>
 
         {{> comments}}
     </div>
 
+    <!-- Sidebar -->
     <div class="offset1 span3">
         {{> masthead}}
 
@@ -30,4 +33,5 @@
         {{> sidebar-article-information}}
         {{> sidebar-contact}}
     </div>
+
 </div>

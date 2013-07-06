@@ -1,9 +1,9 @@
 <div class="row">
 
-    <!-- Content -->
+    <!-- Main -->
     <div class="span8">
         {{#each articles}}
-            <div class="article">
+            <article class="article">
                 <hr class="divider" />
 
                 <h3>
@@ -23,15 +23,15 @@
                 {{{intro markdown}}}
 
                 <a class="more" href="/article/{{name}}">Read More</a>
-            </div>
+            </article>
         {{else}}
-            <div class="article">
+            <article class="article">
                 <hr class="divider" />
 
                 <h3>No Articles</h3>
                 
                 <p>There are currently no articles to display.</p>
-            </div>
+            </article>
         {{/each}}
     </div>
 
@@ -42,4 +42,5 @@
         {{> sidebar-contact}}
         {{> sidebar-categories}}
     </div>
+
 </div>

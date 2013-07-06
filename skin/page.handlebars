@@ -1,16 +1,20 @@
 <div class="row">
+
+    <!-- Main -->
     <div class="span8">
-        <div class="page">
+        <section class="page">
             <hr class="divider" />
 
             {{{markdownEncode page.markdown}}}
-        </div>
+        </section>
     </div>
 
+    <!-- Sidebar -->
     <div class="offset1 span3">
         {{> masthead}}
 
         {{> sidebar-tweets}}
         {{> sidebar-contact}}
     </div>
+    
 </div>

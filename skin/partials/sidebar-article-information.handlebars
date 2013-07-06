@@ -23,12 +23,14 @@
         </ul>
     {{/if}}
 
-    <h4 class="sidebar-header">Revisions</h4>
-    <ul class="information">
-        {{#each article.log}}
-            <li>
-                <a href="/{{@key}}/{{../article.name}}">{{date}}</a>
-            </li>
-        {{/each}}
-    </ul>
+    {{#if article.log}}
+        <h4 class="sidebar-header">Revisions</h4>
+        <ul class="information">
+            {{#each article.log}}
+                <li>
+                    <a href="/{{@key}}/{{../article.name}}">{{date}}</a>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
 </div>
