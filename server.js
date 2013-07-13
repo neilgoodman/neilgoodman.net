@@ -6,13 +6,16 @@ var less = require('less'),
     connect = require('connect'),
     connectAssets = require('connect-assets'),
     connectUserTweets = require('connect-user-tweets'),
-    connectGzip = require('connect-gzip'),
-    wheat = require('wheat');
+    wheat = require('wheat'),
+    etagify = require('etagify'),
+    dateformat = require('dateformat');
 
 var app = connect();
 
 app
-    .use(connectGzip.gzip())
+    .use(etagify([
+        'text/html'
+    ]))
     .use(connectAssets({
         src: __dirname + '/skin/assets'
     }))
