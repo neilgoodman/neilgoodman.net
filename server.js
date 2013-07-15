@@ -17,7 +17,8 @@ app
         'text/html'
     ]))
     .use(connectAssets({
-        src: __dirname + '/skin/assets'
+        src: __dirname + '/skin/assets',
+        buildDir: process.env.CONNECT_ASSETS_DIRECTORY
     }))
     .use(connect.static(__dirname + '/skin/assets'))
     .use(function (req, res, next) {
