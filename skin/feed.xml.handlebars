@@ -4,7 +4,7 @@
         <title>neilgoodman.net</title>
         <atom:link href="http://neilgoodman.net/feed.xml" rel="self" type="application/rss+xml" />
         <link>http://neilgoodman.net</link>
-        <description><p>I am a Software Design Engeineer at <a href="http://sonicfoundry.com">Sonic Foundry</a> and I am currently living in Madison, WI. I graduated from the University of Wisconsin-Madison in 2010 with a Bachelors of Science in Computer Science.</p><p>My passion is software development, but more specifically I work in the areas of UI, web services, and mobile. I love JavaScript, developing elegant and simple frameworks.</p></description>
+        <description>&lt;p&gt;I am a Software Design Engeineer at &lt;a href="http://sonicfoundry.com"&gt;Sonic Foundry&lt;/a&gt; and I am currently living in Madison, WI. I graduated from the University of Wisconsin-Madison in 2010 with a Bachelors of Science in Computer Science.&lt;/p&gt;&lt;p&gt;My passion is software development, but more specifically I work in the areas of UI, web services, and mobile. I love JavaScript, developing elegant and simple frameworks.&lt;/p&gt;</description>
         <pubDate>{{formatNewRFC822Date}}</pubDate>
         <generator>http://github.com/posco2k8/wheat</generator>
         <language>en</language>
@@ -12,16 +12,16 @@
         {{#each articles}}
             <item>
                 <title>{{title}}</title>
-                <link>http://neilgoodman.net/{{#if article.alias}}{{article.alias}}{{else}}article/{{article.name}}{{/if}}</link>
-                <comments>http://howtonode.org/{{#if article.alias}}{{article.alias}}{{else}}article/{{article.name}}{{/if}}#disqus_thread</comments>
+                <link>http://neilgoodman.net/{{#if alias}}{{alias}}{{else}}article/{{name}}{{/if}}</link>
+                <comments>http://neilgoodman.net/{{#if alias}}{{alias}}{{else}}article/{{name}}{{/if}}#disqus_thread</comments>
                 <pubDate>{{formatRFC822Date date}}</pubDate>
-                <guid isPermaLink="true">http://howtonode.org/{{#if article.alias}}{{article.alias}}{{else}}article/{{article.name}}{{/if}}</guid>
-                <description>{{markdownEncode markdown}}</description>
-                <author>
-                    {{#if author}}
+                <guid isPermaLink="true">http://neilgoodman.net/{{#if alias}}{{alias}}{{else}}article/{{name}}{{/if}}</guid>
+                <description>{{markdownEncode markdown}}</description>            
+                {{#if author}}
+                    <author>
                         {{author.email}} ({{author.name}})
-                    {{/if}}
-                </author>
+                    </author>
+                {{/if}}
             </item>
         {{/each}}
     </channel>
