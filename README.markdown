@@ -1,12 +1,10 @@
 # neilgoodman.net
 
-This is the repository for my [wheat][] based blog. [neilgoodman.net][] currently runs a LAMP stack running WordPress, but I find it very difficult to write articles with lots of code examples in WordPress, so I am planning to migrate over to [wheat][].
+This is the repository for my [wheat][] based blog. The repository is used as a backup for [neilgoodman.net][]. It's also here in case anyone is interested in reading the source code.
 
 # Licensing
 
-All articles are copyright to Neil Goodman, but all code (including examples used in articles) are licensed under the MIT License.
+I (Neil Goodman) hold the copyright to all articles, but all code (including examples used in articles) are licensed under the MIT License.
 
 [wheat]: http://github.com/creationix/wheat
 [neilgoodman.net]: http://neilgoodman.net
-[Haml]: [http://haml.info/][]
-[Handlebars]: http://handlebarsjs.com/
