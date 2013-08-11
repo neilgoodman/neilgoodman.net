@@ -26,7 +26,7 @@
                             <li><i class="icon-tags"></i> {{categoryList article.categories}}</li>
                         {{/if}}
 
-                        <li><i class="icon-comment"></i> <a href="/{{#if article.alias}}{{article.alias}}{{else}}article/{{article.name}}{{/if}}#disqus_thread">Comments</a></li>
+                        <li><i class="icon-comment"></i> <a href="/{{#if article.alias}}{{article.alias}}/{{else}}article/{{article.name}}{{/if}}#disqus_thread">Comments</a></li>
                     </ul>
 
                     {{{markdownEncode article.markdown}}}

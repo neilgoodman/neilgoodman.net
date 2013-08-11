@@ -12,10 +12,10 @@
         {{#each articles}}
             <item>
                 <title>{{title}}</title>
-                <link>http://neilgoodman.net/{{#if alias}}{{alias}}{{else}}article/{{name}}{{/if}}</link>
-                <comments>http://neilgoodman.net/{{#if alias}}{{alias}}{{else}}article/{{name}}{{/if}}#disqus_thread</comments>
+                <link>http://neilgoodman.net/{{#if alias}}{{alias}}/{{else}}article/{{name}}{{/if}}</link>
+                <comments>http://neilgoodman.net/{{#if alias}}{{alias}}/{{else}}article/{{name}}{{/if}}#disqus_thread</comments>
                 <pubDate>{{formatRFC822Date date}}</pubDate>
-                <guid isPermaLink="true">http://neilgoodman.net/{{#if alias}}{{alias}}{{else}}article/{{name}}{{/if}}</guid>
+                <guid isPermaLink="true">http://neilgoodman.net/{{#if alias}}{{alias}}/{{else}}article/{{name}}{{/if}}</guid>
                 <description>{{markdownEncode markdown}}</description>            
                 {{#if author}}
                     <author>
