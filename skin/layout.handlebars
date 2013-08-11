@@ -31,7 +31,7 @@
             <meta property="og:type" content="article">
 
             {{#if article.alias}}
-                <meta property="og:url" content="{{pathJoin description.site article.alias}}">
+                <meta property="og:url" content="{{pathJoin description.site article.alias "/"}}">
             {{else}}
                 <meta property="og:url" content="{{pathJoin description.site "/article/" article.name}}">
             {{/if}}
