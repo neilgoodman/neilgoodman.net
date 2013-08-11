@@ -6,10 +6,13 @@
     </div>
     <nav>
         <ul class="nav">
-            <li>
+            <li {{#compare currentPage "home"}}class="active"{{/compare}}>
                 <a href="/">Home</a>
             </li>
-            <li>
+            <li {{#compare currentPage "articles"}}class="active"{{/compare}}>
+                <a href="/articles">Articles</a>
+            </li>
+            <li {{#compare currentPage "about"}}class="active"{{/compare}}>
                 <a href="/page/about">About</a>
             </li>
         </ul>

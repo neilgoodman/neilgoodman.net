@@ -7,7 +7,8 @@
         </div>
         
         <ul class="breadcrumb">
-            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/articles">Articles<span class="divider">»</span></a></li>
+            <li><a class="active" href="/category/{{toLowerCase category}}">{{category}}</a></li>
         </ul>
 
         <div class="articles">
@@ -51,6 +52,7 @@
 
         {{> sidebar-tweets}}
         {{> sidebar-contact}}
+        {{> sidebar-categories}}
     </div>
 
 </div>

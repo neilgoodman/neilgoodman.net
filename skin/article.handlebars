@@ -2,31 +2,42 @@
 
     <!-- Main -->
     <div class="span8">
-        <article class="article">
-                <hr class="divider" />
+        <div class="phone-masthead">
+            {{> sidebar-masthead}}
+        </div>
+        
+        <ul class="breadcrumb">
+            <li><a href="/articles">Articles</a><span class="divider">»</span></li>
+            <li><a class="active" href="/{{#if article.alias}}{{article.alias}}{{else}}article/{{article.name}}{{/if}}">{{title}}</a></li>
+        </ul>
 
-                <h1>
-                    <a href="/article/{{article.name}}">{{title}}</a>
-                </h1>
+        <div class="articles">
+            <article class="article">
+                    <hr class="divider" />
 
-                <ul class="meta">
-                    <li><i class="icon-calendar"></i> {{formatDate article.date "%B %d%k, %Y"}}</li>
+                    <h1>
+                        <a href="/{{#if article.alias}}{{article.alias}}{{else}}article/{{article.name}}{{/if}}">{{title}}</a>
+                    </h1>
 
-                    {{#if article.categories}}
-                        <li><i class="icon-tags"></i> {{categoryList article.categories}}</li>
-                    {{/if}}
+                    <ul class="meta">
+                        <li><i class="icon-calendar"></i> {{formatDate article.date "%B %d%k, %Y"}}</li>
 
-                    <li><i class="icon-comment"></i> <a href="/article/{{article.name}}#disqus_thread">Comments</a></li>
-                </ul>
+                        {{#if article.categories}}
+                            <li><i class="icon-tags"></i> {{categoryList article.categories}}</li>
+                        {{/if}}
 
-                {{{markdownEncode article.markdown}}}
-        </article>
+                        <li><i class="icon-comment"></i> <a href="/{{#if article.alias}}{{article.alias}}{{else}}article/{{article.name}}{{/if}}#disqus_thread">Comments</a></li>
+                    </ul>
 
-        {{> comments}}
+                    {{{markdownEncode article.markdown}}}
+            </article>
+
+            {{> comments}}
+        </div>
     </div>
 
     <!-- Sidebar -->
-    <div class="offset1 span3">
+    <div class="sidebar offset1 span3">
         {{> sidebar-masthead}}
 
         {{> sidebar-share}}

@@ -7,15 +7,15 @@ var less = require('less'),
     connectAssets = require('connect-assets'),
     connectUserTweets = require('connect-user-tweets'),
     wheat = require('wheat'),
-    etagify = require('etagify'),
     dateformat = require('dateformat');
 
-var app = connect();
+var app = connect(),
+    aliases = {
+        'cordova-html5-tutorial-1': '2012/07/15/building-an-ios-and-android-html5-app-with-cordova-part-1'
+    },
+    wheatProcess = wheat(__dirname, aliases);
 
 app
-    .use(etagify([
-        'text/html'
-    ]))
     .use(connectAssets({
         src: __dirname + '/skin/assets'
     }))
@@ -28,8 +28,7 @@ app
         if (global.css) {
             global.css.root = '/stylesheets';
         }
-        
-        var wheatProcess = wheat(__dirname);
+
         wheatProcess.call(this, req, res, next);
     })
     .use(connectUserTweets({

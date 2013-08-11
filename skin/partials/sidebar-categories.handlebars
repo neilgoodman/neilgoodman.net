@@ -7,7 +7,7 @@
         <ul class="sidebar-list">
             {{#each categories}}
                 <li>
-                    <a href="/category/{{this}}">{{this}}</a>
+                    <a href="/category/{{toLowerCase this}}">{{this}}</a>
                 </li>
             {{/each}}
         </ul>

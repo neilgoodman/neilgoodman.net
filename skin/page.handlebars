@@ -2,6 +2,14 @@
 
     <!-- Main -->
     <div class="span8">
+        <div class="phone-masthead">
+            {{> sidebar-masthead}}
+        </div>
+
+        <ul class="breadcrumb">
+            <li><a class="active" href="/about">About</a></li>
+        </ul>
+
         <section class="page">
             <hr class="divider" />
 
@@ -10,7 +18,7 @@
     </div>
 
     <!-- Sidebar -->
-    <div class="offset1 span3">
+    <div class="sidebar offset1 span3">
         {{> sidebar-masthead}}
 
         {{> sidebar-tweets}}

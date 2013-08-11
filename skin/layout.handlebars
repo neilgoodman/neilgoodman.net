@@ -10,7 +10,11 @@
         </title>
 
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {{#if article.alias}}
+            <base href="http://neilgoodman.net/{{article.alias}}/">
+        {{/if}}
 
         <!-- SEO -->
         {{#if article}}
