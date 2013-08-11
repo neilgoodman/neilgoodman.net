@@ -39,6 +39,10 @@
 
             {{#if article.firstImage}}
                 <meta property="og:image" content="{{pathJoin description.site "/article/" article.firstImage}}">
+            {{else}}
+                {{#if description.image}}
+                    <meta property="og:image" content="{{pathJoin description.site description.image}}">
+                {{/if}}
             {{/if}}
         {{else}}
             <meta property="og:title" content="{{description.name}}">
@@ -85,6 +89,10 @@
 
             {{#if article.firstImage}}
                 <meta name="twitter:image" content="{{pathJoin description.site "/article/" article.firstImage}}">
+            {{else}}
+                {{#if description.image}}
+                    <meta name="twitter:image" content="{{pathJoin description.site description.image}}">
+                {{/if}}
             {{/if}}
         {{else}}
             {{#if description.author.twitter}}
