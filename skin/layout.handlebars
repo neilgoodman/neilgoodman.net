@@ -29,7 +29,12 @@
         {{#if article}}
             <meta property="og:title" content="{{article.title}}">
             <meta property="og:type" content="article">
-            <meta property="og:url" content="{{pathJoin description.site article.name}}">
+
+            {{#if article.alias}}
+                <meta property="og:url" content="{{pathJoin description.site article.alias}}">
+            {{else}}
+                <meta property="og:url" content="{{pathJoin description.site "/article/" article.name}}">
+            {{/if}}
             <meta property="og:description" content="{{markdownFirstParagraph article.markdown}}">
 
             {{#if article.firstImage}}
