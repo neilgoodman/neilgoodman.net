@@ -33,7 +33,7 @@
             <meta property="og:description" content="{{markdownFirstParagraph article.markdown}}">
 
             {{#if article.firstImage}}
-                <meta property="og:image" content="{{pathJoin description.site article.firstImage}}">
+                <meta property="og:image" content="{{pathJoin description.site "/article/" article.firstImage}}">
             {{/if}}
         {{else}}
             <meta property="og:title" content="{{description.name}}">
