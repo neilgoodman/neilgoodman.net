@@ -55,7 +55,7 @@ function parseTweet(tweet) {
     "use strict";
 
     var userNamePattern = /@([^" ]+)/gi,
-        linkPattern = /(http:\/\/[^" ]+)/gi,
+        linkPattern = /((http|https):\/\/[^" ]+)/gi,
         hashtagPattern = /#([^" ]+)/gi;
 
     tweet = tweet.replace(linkPattern, '<a target="_blank" href="$1">$&</a>');
