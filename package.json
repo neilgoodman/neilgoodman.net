@@ -1,27 +1,26 @@
 {
-	"name": "neilgoodman.net",
-	"author": "Neil Goodman (http://neilgoodman.net)",
-	"version": "1.0.0",
-	"private": true,
-	"homepage": "http://neilgoodman.net",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/posco2k8/neilgoodman.net.git"
-	},
-	"engines": {
-		"node": ">=0.8.x",
-  		"npm": ">=1.1.2"
-	},
-	"bundledDependencies": [
-		"wheat",
-		"connect-user-tweets"
-	],
-	"dependencies": {
-		"wheat": "0.2.6",
-		"connect": ">=2.7.3",
-		"connect-assets": ">=2.4.1",
-		"less": "1.3.3",
-		"connect-user-tweets": "git://github.com/posco2k8/connect-user-tweets.git",
-		"dateformat": ">=1.0.6-1.2.3"
-	}
+  "name": "neilgoodman.net",
+  "author": "Neil Goodman (http://neilgoodman.net)",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "http://neilgoodman.net",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/posco2k8/neilgoodman.net.git"
+  },
+  "engines": {
+    "node": "~0.8.x",
+    "npm": "~1.1.2"
+  },
+  "bundledDependencies": [
+    "wheat"
+  ],
+  "dependencies": {
+    "wheat": "0.2.6",
+    "connect": "~2.7.3",
+    "connect-assets": "~2.4.1",
+    "less": "1.3.3",
+    "connect-user-tweets": "~0.1.1",
+    "dateformat": "~1.0.6-1.2.3"
+  }
 }
