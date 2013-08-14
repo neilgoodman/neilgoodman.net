@@ -8,7 +8,7 @@
         
         <ul class="breadcrumb">
             <li><a href="/articles">Articles</a><span class="divider">»</span></li>
-            <li><a class="active" href="/{{#if article.alias}}{{article.alias}}{{else}}article/{{article.name}}{{/if}}">{{title}}</a></li>
+            <li><a class="active" href="/{{#if article.alias}}{{article.alias}}/{{else}}article/{{article.name}}{{/if}}">{{title}}</a></li>
         </ul>
 
         <div class="articles">
@@ -16,7 +16,7 @@
                     <hr class="divider" />
 
                     <h1>
-                        <a href="/{{#if article.alias}}{{article.alias}}{{else}}article/{{article.name}}{{/if}}">{{title}}</a>
+                        <a href="/{{#if article.alias}}{{article.alias}}/{{else}}article/{{article.name}}{{/if}}">{{title}}</a>
                     </h1>
 
                     <ul class="meta">

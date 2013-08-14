@@ -145,6 +145,15 @@
         {{> footer}}
 
         <script type="text/javascript">
+            {{#if article}}
+                var disqus_identifier = '{{article.name}}';
+                var disqus_title = '{{title}}';
+                var disqus_url = 'http://neilgoodman.net/{{#if article.alias}}{{article.alias}}/{{else}}article/{{article.name}}{{/if}}';
+
+                {{#if article.categories}}
+                    var disqus_category_id = '{{first article.categories}}';
+                {{/if}}
+            {{/if}}
             var disqus_shortname = 'neilgoodmannet';
 
             (function () {
