@@ -1,4 +1,5 @@
 //= require jquery-1.9.1
+//= require jquery.render-tweets
 //= require underscore
 //= require prettify
 //= require moment
@@ -29,41 +30,21 @@ $(function () {
 $(function () {
     "use strict";
 
-    var tweetListTemplate = _.template($('[data-template-name="tweet-list"]').html()),
-        success = function (tweets) {
-            var tweetList = tweetListTemplate({ tweets: tweets }),
-                $tweetList = $($.parseHTML(tweetList));
-
-            $('.tweet-list')
-                .empty()
-                .append($tweetList);
-
-            _.defer(function () {
-                $tweetList.addClass('in');
-            });
-        };
-
-    // Display loading throbber.
-    setupSpinner();
-
-    // Request tweets through local proxy.
-    $.get('/tweets', success, 'json');
+    $('.tweet-list')
+        .on('request', function () {
+           // Display loading throbber.
+            setupSpinner(); 
+        })
+        .on('renderCompleted', function (event) {
+            $(this)
+                .find('.fade')
+                .addClass('in');
+        })
+        .renderTweets({
+            template: _.template($('[data-template-name="tweet-list"]').html()),
+            url: '/tweets'
+        });
 });
-
-// Client-side template helpers
-function parseTweet(tweet) {
-    "use strict";
-
-    var userNamePattern = /@([^" ]+)/gi,
-        linkPattern = /((http|https):\/\/[^" ]+)/gi,
-        hashtagPattern = /#([^" ]+)/gi;
-
-    tweet = tweet.replace(linkPattern, '<a target="_blank" href="$1">$&</a>');
-    tweet = tweet.replace(hashtagPattern, '<a target="_blank" href="//twitter.com/search?q=%23$1&amp;src=hash">$&</a>')
-    tweet = tweet.replace(userNamePattern, '<a target="_blank" href="//twitter.com/$1">$&</a>');
-
-    return tweet;
-}
 
 function setupSpinner() {
     "use strict";
