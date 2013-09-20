@@ -2,9 +2,9 @@ Author: Neil Goodman
 
 # About
 
-<img style="float:left; margin: 0 1em 1em 0;" src="/page/about/neil-goodman.jpg" /> I am a ```Software Design Engineer``` at [Sonic Foundry](http://sonicfoundry.com) and I currently live in Madison, WI. I graduated from the University of Wisconsin-Madison in 2010 with a Bachelors of Science in Computer Science.
+<img style="float:left; margin: 0 1em 1em 0;" src="/page/about/neil-goodman.jpg" /> I am a ```Lead Software Engineer``` at [healthfinch](http://healthfinch.com) and I currently live in Madison, WI. I graduated from the University of Wisconsin-Madison in 2010 with a Bachelors of Science in Computer Science.
 
-My passion is software development. More specifically I work in the areas of UI, web services, and mobile. I love JavaScript, developing elegant and simple frameworks, and making great UI.
+My passion is software development. More specifically I work in the areas of UI, web services, and mobile. I love JavaScript, developing elegant and simple frameworks, and designing great software.
 
 ## About This Site
 
