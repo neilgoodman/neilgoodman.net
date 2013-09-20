@@ -1,13 +1,13 @@
-Title: connect-user-tweets Released on NPM
+Title: connect-user-tweets Released on npm
 Author: Neil Goodman
 Categories: Releases
 Date: Mon Aug 12 2013 22:07:34 GMT-0500 (CDT)
 
-I just released my first NPM package. It provides a way to fetch tweets for a given user and cache them on a [Connect](http://www.senchalabs.org/connect/) based server. This module is being used on this site to provide the `Recent Tweets` sidebar on desktop and tablet resolutions.
+I just released my first npm package. It provides a way to fetch tweets for a given user and cache them on a [Connect](http://www.senchalabs.org/connect/) based server. This module is being used on this site to provide the `Recent Tweets` sidebar on desktop and tablet resolutions.
 
 ##Install
 
-To install simply install [Node.js](http://nodejs.org/) and NPM and run the following command in your project's directory:
+To install simply install [Node.js](http://nodejs.org/) and npm and run the following command in your project's directory:
 
 `npm install connect-user-tweets`
 
